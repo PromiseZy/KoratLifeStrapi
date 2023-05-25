@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dropbox_dropboxes",
+  "info": {
+    "displayName": "DropboxHeaderNav",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true
+    },
+    "href": {
+      "type": "text",
+      "unique": false
+    }
+  }
+}

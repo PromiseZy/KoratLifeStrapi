@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "header_navs",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "BlogCategory",
+    "singularName": "header-nav",
+    "pluralName": "header-navs",
+    "displayName": "HeaderNav",
     "description": ""
   },
   "options": {
@@ -23,23 +23,27 @@
         }
       },
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
-    "slug": {
+    "dropbox": {
+      "type": "component",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "uid",
-      "targetField": "name",
-      "required": true
+      "component": "dropbox.dropbox"
     },
-    "blog_posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::blog-post.blog-post",
-      "mappedBy": "categories"
+    "href": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "required": true
     }
   }
 }

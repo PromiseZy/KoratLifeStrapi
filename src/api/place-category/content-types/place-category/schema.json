@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "place_categories",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "BlogCategory",
+    "singularName": "place-category",
+    "pluralName": "place-categories",
+    "displayName": "PlaceCategory",
     "description": ""
   },
   "options": {
@@ -23,7 +23,8 @@
         }
       },
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "slug": {
       "pluginOptions": {
@@ -35,11 +36,11 @@
       "targetField": "name",
       "required": true
     },
-    "blog_posts": {
+    "places": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::blog-post.blog-post",
-      "mappedBy": "categories"
+      "target": "api::place.place",
+      "inversedBy": "place_categories"
     }
   }
 }

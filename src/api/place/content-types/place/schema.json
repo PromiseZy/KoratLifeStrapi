@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "places",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "BlogCategory",
-    "description": ""
+    "singularName": "place",
+    "pluralName": "places",
+    "displayName": "Place"
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +15,7 @@
     }
   },
   "attributes": {
-    "name": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -32,14 +31,14 @@
         }
       },
       "type": "uid",
-      "targetField": "name",
+      "targetField": "title",
       "required": true
     },
-    "blog_posts": {
+    "place_categories": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::blog-post.blog-post",
-      "mappedBy": "categories"
+      "target": "api::place-category.place-category",
+      "mappedBy": "places"
     }
   }
 }

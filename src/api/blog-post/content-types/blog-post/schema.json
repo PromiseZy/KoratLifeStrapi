@@ -8,7 +8,10 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true,
+    "populateCreatorFields": true
   },
   "pluginOptions": {
     "i18n": {
